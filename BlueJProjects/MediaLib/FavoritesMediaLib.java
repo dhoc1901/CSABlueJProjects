@@ -11,9 +11,23 @@ public class FavoritesMediaLib
         String songInfo = MediaFile.readString();
         while (songInfo != null)
         {
+            try{
             String song = songInfo.substring(0,songInfo.indexOf("|"));
-            System.out.println(song);
-            songInfo = songInfo.substring(songInfo.indexOf("|"));
+            System.out.println("Title: " + song);
+            String songInfo2 = songInfo.substring(songInfo.indexOf("|"));
+            songInfo2 = songInfo2.substring(1);
+            songInfo = songInfo2.substring(1);
+            String rate = songInfo2.substring(1, songInfo2.indexOf("|"));
+            System.out.println("Rating: " + rate);
+            String songInfo3 = songInfo.substring(songInfo.indexOf("|"));
+            songInfo3 = songInfo3.substring(1);
+            songInfo = songInfo3;
+            
         }
+        
+        catch(Exception e){
+            break;
+        }
+    }
     }
 }

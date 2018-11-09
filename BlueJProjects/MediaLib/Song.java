@@ -3,7 +3,7 @@
  * Write a description of class Song here.
  *
  * @author David H
- * @version 9/24/18
+ * @version 11/9/18
  */
 public class Song
 {
@@ -40,5 +40,13 @@ public class Song
     public void addToFavorites() {
         favorite = true;
     }
-    
+    public void setTitle(String s) {
+        title = s;
+    }
+    public void setPrice(double p) {
+        price = p;
+    }
+    public Song(String title) {
+        this.title = title;
+    }
 }
